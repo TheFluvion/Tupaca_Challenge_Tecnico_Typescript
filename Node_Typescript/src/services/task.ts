@@ -51,4 +51,3 @@ export const removeTask = (id: string) => {
         console.log('eliminado')
     })
 }
-

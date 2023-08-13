@@ -26,7 +26,7 @@ const useTask = () => {
       })
   }
 
-  const postNewTask = (newTask: NewTaskAssign) => {
+  const postNewTask = () => {
     fetch('http://localhost:3000/api/taskRouter/', {
       method: 'POST',
       mode: 'cors',
@@ -34,7 +34,7 @@ const useTask = () => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(newTask)
+      body: JSON.stringify(singleTask)
     }).then(response => response.json())
       .then(data => {
         console.log(data)
@@ -44,7 +44,7 @@ const useTask = () => {
       })
   }
 
-  const editTask = (editTask: NewTaskAssign) => {
+  const editTask = () => {
     fetch('http://localhost:3000/api/taskRouter/editTask', {
       method: 'POST',
       mode: 'cors',
@@ -52,7 +52,7 @@ const useTask = () => {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(editTask)
+      body: JSON.stringify(singleTask)
     }).then(response => response.json())
       .then(data => {
         console.log(data)

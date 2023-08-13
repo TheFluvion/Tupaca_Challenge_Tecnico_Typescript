@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import './App.css'
-import NewTask from './components/newTask/Task'
+import NewTask from './components/Task/Task'
 import TaskList from './components/taskList/TaskList'
 import useTask from './hooks/useTask'
 import { SortBy, Task } from './types.d'

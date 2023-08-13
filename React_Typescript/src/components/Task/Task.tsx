@@ -31,9 +31,9 @@ const NewTask = ({ edit, setEdit, show, setShow }: Props) => {
             return
         }
         if (edit) {
-            editTask(singleTask)
+            editTask()
         } else {
-            postNewTask(singleTask)
+            postNewTask()
         }
         handleClose()
         setError('')
