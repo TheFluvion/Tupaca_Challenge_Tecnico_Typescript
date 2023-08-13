@@ -1,0 +1,60 @@
+.newTaskOpen{
+    background-color: white;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    height: 100vh;
+    width: 250px;
+    padding: 0 10px 0 10px;
+}
+
+.newTaskClose{
+    width: 0;
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 5px;
+}
+
+input, textarea {
+    margin: 0;
+    padding: 5px;
+    width: 90%;
+}
+
+textarea{
+    resize: none;
+    height: 300px;
+}
+
+.buttonForm{
+    background-color: blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.date{
+    margin: 5px;
+}
+
+.titleTask{
+    margin: 10px 0;
+}
+
+.error{
+    color:red;
+}
