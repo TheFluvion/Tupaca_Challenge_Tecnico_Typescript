@@ -2,10 +2,10 @@
 Desafío Técnico: Tablero de Tareas
 
 Node.js:
- -Instalación e inicio
-    Entrar en la carpeta Node_Typescript
-    Realizar instalacion con "npm install"
-    Ejecutar la aplicación con "npm run dev"
+ - Instalación e inicio
+    - Entrar en la carpeta Node_Typescript
+    - Realizar instalacion con "npm install"
+    - Ejecutar la aplicación con "npm run dev"
 
  -Explicación detallada de cada carpeta y archivo:
 - **Node_Typescript/:** Carpeta del backend que contiene el código del servidor.
@@ -19,10 +19,10 @@ Node.js:
 
 
 React.js:
-  -Instalación e inicio
-    Entrar en la carpeta React_Typescript
-    Realizar instalacion con "npm install"
-    Ejecutar la aplicación con "npm run dev"
+  - Instalación e inicio
+    - Entrar en la carpeta React_Typescript
+    - Realizar instalacion con "npm install"
+    - Ejecutar la aplicación con "npm run dev"
 
 Explicación detallada de cada carpeta y archivo:
     - **frontend/:** Carpeta del frontend que contiene la interfaz de usuario.
