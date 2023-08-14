@@ -1,6 +1,7 @@
-import taskData from './tasks.json'
+import { randomUUID } from 'crypto'
+import taskData from '../DATA/tasks.json'
 import { Task, NewTaskAssign } from '../types'
-const fs = require('fs');
+import { saveFile } from '../herpers/task'
 
 const tasks: Task[] = taskData as Task[]
 
@@ -12,7 +13,7 @@ export const findTaskById = (id: string): Task | undefined => {
 
 export const newTask = (newTaskAssign: NewTaskAssign): Task => {
     const newTask = {
-        id: Math.random().toString(36).substring(2) + Date.now().toString(36),
+        id: randomUUID(),
         ...newTaskAssign
     }
 
@@ -21,6 +22,7 @@ export const newTask = (newTaskAssign: NewTaskAssign): Task => {
 }
 
 export const editTask = (newTaskAssign: Task) => {
+    const url = './src/DATA/tasks.json'
     const newTaskList = tasks.map((t: Task) => {
         if (t.id === newTaskAssign.id) {
             return newTaskAssign
@@ -29,25 +31,14 @@ export const editTask = (newTaskAssign: Task) => {
         }
     })
 
-    fs.writeFile('./tasks.json', JSON.stringify(newTaskList), 'utf8', (err: NodeJS.ErrnoException) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        console.log('editado')
-    })
+    saveFile(url, newTaskList)
 }
 
 export const removeTask = (id: string) => {
+    const url = './src/DATA/tasks.json'
     const newTaskList = tasks.filter((t: Task) => {
         return !t.id.includes(id)
     })
 
-    fs.writeFile('./tasks.json', JSON.stringify(newTaskList), 'utf8', (err: NodeJS.ErrnoException) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
-        console.log('eliminado')
-    })
+    saveFile(url, newTaskList)
 }

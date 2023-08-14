@@ -1,6 +1,6 @@
-import { Task, Status } from "../../types.d"
-import * as dayjs from 'dayjs'
 import { Dispatch, SetStateAction } from 'react';
+import * as dayjs from 'dayjs'
+import { Task, Status } from "../../types.d"
 import useTask from "../../hooks/useTask";
 
 interface Props {

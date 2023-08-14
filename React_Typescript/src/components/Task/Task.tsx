@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import './index.css'
 import { Dispatch, SetStateAction } from 'react';
 import useTask from '../../hooks/useTask';
+
+import './index.css'
 
 interface Props {
     edit?: string

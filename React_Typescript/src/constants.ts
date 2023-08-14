@@ -1,5 +1,5 @@
-import { Status } from './types.d'
 import * as dayjs from 'dayjs'
+import { Status } from './types.d'
 
 export const INITIAL_STATE = {
     name: '',
